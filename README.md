@@ -12,12 +12,14 @@ yarn add redux react-redux @types/react-redux
 yarn add typesafe-actions
 ```
 
-## eslint 설치
+## eslint, prettier 설치
 
 ```
 yarn add -D @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint-config-airbnb-typescript eslint-plugin-jest
 
 npx install-peerdeps --dev eslint-config-airbnb    <-- 물음에 y로 답해 yarn으로 설치 진행
+
+yarn add -D prettier eslint-config-prettier eslint-plugin-prettier
 ```
 
 ## 참고
