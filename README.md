@@ -5,6 +5,7 @@
 ```cmd terminal
 npx create-react-app . --typescript
 
+yarn add redux react-redux @types/react-redux
 ```
 
 
