@@ -17,6 +17,7 @@ yarn add typesafe-actions
 ```
 yarn add -D @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint-config-airbnb-typescript eslint-plugin-jest
 
+npx install-peerdeps --dev eslint-config-airbnb    <-- 물음에 y로 답해 yarn으로 설치 진행
 ```
 
 ## 참고
