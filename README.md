@@ -72,6 +72,17 @@ yarn add -D prettier eslint-config-prettier eslint-plugin-prettier
 * 그래도 반응이 없다면 .eslintrc > rule > prettier/prettier 에 tabWidth를 4, 3 등으로 조정하고 확인해 본다.
 * 그래도 반응이 없다면 output > eslint 에 들어가서 에러가 발생했는지 확인한다.
 
+## tsconfig.json 오류 확인하기
+
+```jsonc
+"jsx": "react-jsx" // <- 오류나서 아래로 고침
+
+"jsx": "react"
+```
+
+- 자동생성된 tsconfig.json에 들어가 오류가 있나 확인한다.
+- tsconfig.json 에 오류가없어야지 린트가 정상동작한다.
+
 ## (선택사항) package.json 에 script 추가
 
 ```jsonc package.json
