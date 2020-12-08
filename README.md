@@ -2,8 +2,8 @@
 
 - 2020.12.04 기준 최신 CRA 버전으로 다시 적용해보기
 
-
 ## 귀찮은 자를 위한 package.json, eslint config
+
 ```jsonc
 {
   "name": "typescript-react-eslint-prettier-practice",
@@ -30,17 +30,10 @@
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+    "extends": ["react-app", "react-app/jest"]
   },
   "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
+    "production": [">0.2%", "not dead", "not op_mini all"],
     "development": [
       "last 1 chrome version",
       "last 1 firefox version",
@@ -119,7 +112,8 @@ npx install-peerdeps --dev eslint-config-airbnb
 ```
 
 ## use workspace typescript version
-```jsonc 
+
+```jsonc
 {
   // (...)
   "typescript.tsdk": "node_modules\\typescript\\lib"
@@ -145,10 +139,27 @@ npx install-peerdeps --dev eslint-config-airbnb
     "prettier": "^2.2.1"
   }
 ```
+
 - _package.json_ 에서 eslint를 삭제한다.
 
 ```
-rm -rf node_modules/ yarn.lock  
+rm -rf node_modules/ yarn.lock
 yarn
 ```
+
 - 노드 모듈이랑 yarn.lock 을 삭제하고 다시 종속성을 설치한다.
+
+## vscode auto format setting
+
+```jsonc .vscode/settings.json
+{
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "editor.formatOnSave": false
+}
+```
+
+- 파일을 저장할 때 자동포맷팅을 하는데,
+- 위처럼 prettier 확장도구로 인한 포맷팅은 비활성화해주고,
+- eslint에서 포맷팅을 하도록 설정한다.
